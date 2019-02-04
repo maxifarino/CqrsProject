@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7A7B2AF-F602-4524-9AD8-A391CF51CAC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAP.Domain</RootNamespace>
+    <AssemblyName>GAP.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElementBase.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\BeneficiarioSave.cs" />
+    <Compile Include="Entities\Beneficiario.cs" />
+    <Compile Include="Entities\BeneficiarioPersona.cs" />
+    <Compile Include="Entities\Caracteristica.cs" />
+    <Compile Include="Entities\Cargo.cs" />
+    <Compile Include="Entities\Comunicacion.cs" />
+    <Compile Include="Entities\Convenio.cs" />
+    <Compile Include="Entities\Curso.cs" />
+    <Compile Include="Entities\Domicilio.cs" />
+    <Compile Include="Entities\EnfermedadIntegrante.cs" />
+    <Compile Include="Entities\Entidad.cs" />
+    <Compile Include="Entities\FormaJuridica.cs" />
+    <Compile Include="Entities\Funcionalidad.cs" />
+    <Compile Include="Entities\GridSocioAmbiental.cs" />
+    <Compile Include="Entities\Inmueble.cs" />
+    <Compile Include="Entities\Inscripcion.cs" />
+    <Compile Include="Entities\IntegranteSave.cs" />
+    <Compile Include="Entities\Integrante.cs" />
+    <Compile Include="Entities\IntegrantePersona.cs" />
+    <Compile Include="Entities\Persona.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\Personal.cs" />
+    <Compile Include="Entities\Requisito.cs" />
+    <Compile Include="Entities\RequisitoPersonal.cs" />
+    <Compile Include="Entities\Responsable.cs" />
+    <Compile Include="Entities\Rol.cs" />
+    <Compile Include="Entities\SalaCuna.cs" />
+    <Compile Include="Entities\SalitaCuna.cs" />
+    <Compile Include="Entities\Sede.cs" />
+    <Compile Include="Entities\Seguridad\ApplicationTypes.cs" />
+    <Compile Include="Entities\Seguridad\Cliente.cs" />
+    <Compile Include="Entities\Seguridad\RefreshToken.cs" />
+    <Compile Include="Entities\SocioAmbiental.cs" />
+    <Compile Include="Entities\TipoDocumento.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\UsuarioLog.cs" />
+    <Compile Include="Entities\Vinculo.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="IVisitor\IVisitorBeneficiarioSave.cs" />
+    <Compile Include="IVisitor\IVisitorBeneficiario.cs" />
+    <Compile Include="IVisitor\IvisitorConvenio.cs" />
+    <Compile Include="IVisitor\IVisitorCurso.cs" />
+    <Compile Include="IVisitor\IVisitorDomicilio.cs" />
+    <Compile Include="IVisitor\IVisitorEntidad.cs" />
+    <Compile Include="IVisitor\IVisitorInmueble.cs" />
+    <Compile Include="IVisitor\IVisitorInscripcionCurso.cs" />
+    <Compile Include="IVisitor\IVisitorIntegrante.cs" />
+    <Compile Include="IVisitor\IVisitorPerson.cs" />
+    <Compile Include="IVisitor\IVisitorPersonaFisica.cs" />
+    <Compile Include="IVisitor\IVisitorPersonal.cs" />
+    <Compile Include="IVisitor\IvisitorRequisito.cs" />
+    <Compile Include="IVisitor\IVisitorRol.cs" />
+    <Compile Include="IVisitor\IVisitorSalaCuna.cs" />
+    <Compile Include="IVisitor\IVisitorSalitaCuna.cs" />
+    <Compile Include="IVisitor\IVisitorSocioAmbiental.cs" />
+    <Compile Include="IVisitor\IVisitorUsuario.cs" />
+    <Compile Include="IVisitor\VisitorBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAP.Base\GAP.Base.csproj">
+      <Project>{e11d7dbb-8536-4ef7-8da7-20d45d052b16}</Project>
+      <Name>GAP.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

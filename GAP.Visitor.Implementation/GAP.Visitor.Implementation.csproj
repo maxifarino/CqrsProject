@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91F8D57F-EFF9-4CCA-8AC9-EBD0123837A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAP.Visitor.Implementation</RootNamespace>
+    <AssemblyName>GAP.Visitor.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceAdministrarConvenios\ConveniosServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceAdministrarRequisitos\RequisitosServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceBeneficiario\BeneficiarioServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceCurso\CursoServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceCurso\InscripcionCursoServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceDomicilio\DomicilioServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceEntidad\EntidadServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceInmueble\InmuebleServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceIntegrante\IntegranteServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServicePersonaFisica\PersonaServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServicePersonal\PersonalServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServicePerson\PersonServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceBusinessEstructureBase.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceSalaCuna\SalaCunaServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceSalitaCuna\SalitaCunaServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceSocioAmbiental\SocioAmbientalServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceUsuario\RolServiceBusiness.cs" />
+    <Compile Include="ServiceBusinessStructure\ServiceUsuario\UsuarioServiceBusiness.cs" />
+    <Compile Include="Visitor\VisitorAdministrarConvenios\VisitorConveniosSave.cs" />
+    <Compile Include="Visitor\VisitorAdministrarSocioAmbiental\VisitorSocioAmbientalSave.cs" />
+    <Compile Include="Visitor\VisitorBeneficiario\VisitorBeneficiarioCreate.cs" />
+    <Compile Include="Visitor\VisitorBeneficiario\VisitorBeneficiarioUpdate.cs" />
+    <Compile Include="Visitor\VisitorCurso\VisitorCursoSave.cs" />
+    <Compile Include="Visitor\VisitorCurso\VisitorCursoUpdate.cs" />
+    <Compile Include="Visitor\VisitorInscripcionCurso\VisitorInscripcionCurso.cs" />
+    <Compile Include="Visitor\VisitorIntegrante\VisitorIntegranteSave.cs" />
+    <Compile Include="Visitor\VisitorPersonaFisica\VisitorPersonaSave.cs" />
+    <Compile Include="Visitor\VisitorPersonSave.cs" />
+    <Compile Include="Visitor\VisitorPersonUpdate.cs" />
+    <Compile Include="Visitor\VisitorsAdministrarRequisitos\VisitorRequisitosSave.cs" />
+    <Compile Include="Visitor\VisitorsDomicilio\VisitorDomiclioSave.cs" />
+    <Compile Include="Visitor\VisitorsEntidad\VisitorEntidadSave.cs" />
+    <Compile Include="Visitor\VisitorsEntidad\VisitorEntidadUpdate.cs" />
+    <Compile Include="Visitor\VisitorsInmueble\VisitorInmuebleAdministrar.cs" />
+    <Compile Include="Visitor\VisitorsPersonal\VisitorPersonalSave.cs" />
+    <Compile Include="Visitor\VisitorsPersonal\VisitorPersonalUpdate.cs" />
+    <Compile Include="Visitor\VisitorsSalaCuna\VisitorSalaCunaDelete.cs" />
+    <Compile Include="Visitor\VisitorsSalaCuna\VisitorSalaCunaInaugurar.cs" />
+    <Compile Include="Visitor\VisitorsSalaCuna\VisitorSalaCunaSave.cs" />
+    <Compile Include="Visitor\VisitorsSalaCuna\VisitorSalaCunaUpdate.cs" />
+    <Compile Include="Visitor\VisitorsSalitaCuna\VisitorSalitaCunaDelete.cs" />
+    <Compile Include="Visitor\VisitorsSalitaCuna\VisitorSalitaCunaSave.cs" />
+    <Compile Include="Visitor\VisitorsSalitaCuna\VisitorSalitaCunaUpdate.cs" />
+    <Compile Include="Visitor\VisitorsUsuario\VisitorRolUsuarioSave.cs" />
+    <Compile Include="Visitor\VisitorsUsuario\VisitorUsuarioSave.cs" />
+    <Compile Include="Visitor\VisitorsUsuario\VisitorUsuarioUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAP.Base\GAP.Base.csproj">
+      <Project>{e11d7dbb-8536-4ef7-8da7-20d45d052b16}</Project>
+      <Name>GAP.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.DataAcces\GAP.DataAcces.csproj">
+      <Project>{8e5d78bd-378f-4580-b91b-4b7e1b33e235}</Project>
+      <Name>GAP.DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Domain\GAP.Domain.csproj">
+      <Project>{b7a7b2af-f602-4524-9ad8-a391cf51cac0}</Project>
+      <Name>GAP.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.LocalScheme\GAP.Repository.LocalScheme.csproj">
+      <Project>{4b2e67e0-aece-4f17-a40e-5b6732e894ac}</Project>
+      <Name>GAP.Repository.LocalScheme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.RepositoryBase\GAP.RepositoryBase.csproj">
+      <Project>{657bb797-df00-4d7c-9b32-ce3d28edf143}</Project>
+      <Name>GAP.RepositoryBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

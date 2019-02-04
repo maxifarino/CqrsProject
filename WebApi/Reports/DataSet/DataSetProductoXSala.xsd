@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetProductoXSala" targetNamespace="http://tempuri.org/DataSetProductoXSala.xsd" xmlns:mstns="http://tempuri.org/DataSetProductoXSala.xsd" xmlns="http://tempuri.org/DataSetProductoXSala.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetProductoXSala" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetProductoXSala" msprop:Generator_UserDSName="DataSetProductoXSala">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProductoXSala" msprop:Generator_TableClassName="ProductoXSalaDataTable" msprop:Generator_TableVarName="tableProductoXSala" msprop:Generator_TablePropName="ProductoXSala" msprop:Generator_RowDeletingName="ProductoXSalaRowDeleting" msprop:Generator_RowChangingName="ProductoXSalaRowChanging" msprop:Generator_RowEvHandlerName="ProductoXSalaRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoXSalaRowDeleted" msprop:Generator_UserTableName="ProductoXSala" msprop:Generator_RowChangedName="ProductoXSalaRowChanged" msprop:Generator_RowEvArgName="ProductoXSalaRowChangeEvent" msprop:Generator_RowClassName="ProductoXSalaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SalaCuna" msprop:Generator_ColumnVarNameInTable="columnSalaCuna" msprop:Generator_ColumnPropNameInRow="SalaCuna" msprop:Generator_ColumnPropNameInTable="SalaCunaColumn" msprop:Generator_UserColumnName="SalaCuna" type="xs:string" minOccurs="0" />
+              <xs:element name="LatasLecheMaternizada1" msprop:Generator_ColumnVarNameInTable="columnLatasLecheMaternizada1" msprop:Generator_ColumnPropNameInRow="LatasLecheMaternizada1" msprop:Generator_ColumnPropNameInTable="LatasLecheMaternizada1Column" msprop:Generator_UserColumnName="LatasLecheMaternizada1" type="xs:int" minOccurs="0" />
+              <xs:element name="LatasLecheMaternizada2" msprop:Generator_ColumnVarNameInTable="columnLatasLecheMaternizada2" msprop:Generator_ColumnPropNameInRow="LatasLecheMaternizada2" msprop:Generator_ColumnPropNameInTable="LatasLecheMaternizada2Column" msprop:Generator_UserColumnName="LatasLecheMaternizada2" type="xs:int" minOccurs="0" />
+              <xs:element name="LatasLecheEnteraFortificada" msprop:Generator_ColumnVarNameInTable="columnLatasLecheEnteraFortificada" msprop:Generator_ColumnPropNameInRow="LatasLecheEnteraFortificada" msprop:Generator_ColumnPropNameInTable="LatasLecheEnteraFortificadaColumn" msprop:Generator_UserColumnName="LatasLecheEnteraFortificada" type="xs:int" minOccurs="0" />
+              <xs:element name="CantLecheTotal" msprop:Generator_ColumnVarNameInTable="columnCantLecheTotal" msprop:Generator_ColumnPropNameInRow="CantLecheTotal" msprop:Generator_ColumnPropNameInTable="CantLecheTotalColumn" msprop:Generator_UserColumnName="CantLecheTotal" type="xs:int" minOccurs="0" />
+              <xs:element name="SalaCunaId" msprop:Generator_ColumnVarNameInTable="columnSalaCunaId" msprop:Generator_ColumnPropNameInRow="SalaCunaId" msprop:Generator_ColumnPropNameInTable="SalaCunaIdColumn" msprop:Generator_UserColumnName="SalaCunaId" type="xs:long" minOccurs="0" />
+              <xs:element name="PaqPanialesTamanioM" msprop:Generator_ColumnVarNameInTable="columnPaqPanialesTamanioM" msprop:Generator_ColumnPropNameInRow="PaqPanialesTamanioM" msprop:Generator_ColumnPropNameInTable="PaqPanialesTamanioMColumn" msprop:Generator_UserColumnName="PaqPanialesTamanioM" type="xs:int" minOccurs="0" />
+              <xs:element name="PaqPanialesTamanioG" msprop:Generator_ColumnVarNameInTable="columnPaqPanialesTamanioG" msprop:Generator_ColumnPropNameInRow="PaqPanialesTamanioG" msprop:Generator_ColumnPropNameInTable="PaqPanialesTamanioGColumn" msprop:Generator_UserColumnName="PaqPanialesTamanioG" type="xs:int" minOccurs="0" />
+              <xs:element name="PaqPanialesTamanioP" msprop:Generator_ColumnVarNameInTable="columnPaqPanialesTamanioP" msprop:Generator_ColumnPropNameInRow="PaqPanialesTamanioP" msprop:Generator_ColumnPropNameInTable="PaqPanialesTamanioPColumn" msprop:Generator_UserColumnName="PaqPanialesTamanioP" type="xs:int" minOccurs="0" />
+              <xs:element name="PaqPanialesTamanioXG" msprop:Generator_ColumnVarNameInTable="columnPaqPanialesTamanioXG" msprop:Generator_ColumnPropNameInRow="PaqPanialesTamanioXG" msprop:Generator_ColumnPropNameInTable="PaqPanialesTamanioXGColumn" msprop:Generator_UserColumnName="PaqPanialesTamanioXG" type="xs:int" minOccurs="0" />
+              <xs:element name="PaqPanialesTamanioXXG" msprop:Generator_ColumnVarNameInTable="columnPaqPanialesTamanioXXG" msprop:Generator_ColumnPropNameInRow="PaqPanialesTamanioXXG" msprop:Generator_ColumnPropNameInTable="PaqPanialesTamanioXXGColumn" msprop:Generator_UserColumnName="PaqPanialesTamanioXXG" type="xs:int" minOccurs="0" />
+              <xs:element name="CantPanialesTotal" msprop:Generator_ColumnVarNameInTable="columnCantPanialesTotal" msprop:Generator_ColumnPropNameInRow="CantPanialesTotal" msprop:Generator_ColumnPropNameInTable="CantPanialesTotalColumn" msprop:Generator_UserColumnName="CantPanialesTotal" type="xs:int" minOccurs="0" />
+              <xs:element name="LatasLecheMaternizada3" msprop:Generator_ColumnVarNameInTable="columnLatasLecheMaternizada3" msprop:Generator_ColumnPropNameInRow="LatasLecheMaternizada3" msprop:Generator_ColumnPropNameInTable="LatasLecheMaternizada3Column" msprop:Generator_UserColumnName="LatasLecheMaternizada3" type="xs:string" minOccurs="0" />
+              <xs:element name="LatasLecheFluidaEntera" msprop:Generator_ColumnVarNameInTable="columnLatasLecheFluidaEntera" msprop:Generator_ColumnPropNameInRow="LatasLecheFluidaEntera" msprop:Generator_ColumnPropNameInTable="LatasLecheFluidaEnteraColumn" msprop:Generator_UserColumnName="LatasLecheFluidaEntera" type="xs:string" minOccurs="0" />
+              <xs:element name="LatasLecheEspecial" msprop:Generator_ColumnVarNameInTable="columnLatasLecheEspecial" msprop:Generator_ColumnPropNameInRow="LatasLecheEspecial" msprop:Generator_ColumnPropNameInTable="LatasLecheEspecialColumn" msprop:Generator_UserColumnName="LatasLecheEspecial" type="xs:string" minOccurs="0" />
+              <xs:element name="CodigoUnico" msprop:Generator_ColumnVarNameInTable="columnCodigoUnico" msprop:Generator_ColumnPropNameInRow="CodigoUnico" msprop:Generator_ColumnPropNameInTable="CodigoUnicoColumn" msprop:Generator_UserColumnName="CodigoUnico" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

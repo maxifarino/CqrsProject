@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSInfoGlobal" targetNamespace="http://tempuri.org/DSInfoGlobal.xsd" xmlns:mstns="http://tempuri.org/DSInfoGlobal.xsd" xmlns="http://tempuri.org/DSInfoGlobal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSInfoGlobal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSInfoGlobal" msprop:Generator_UserDSName="DSInfoGlobal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTInfoGlobal" msprop:Generator_TableClassName="DTInfoGlobalDataTable" msprop:Generator_TableVarName="tableDTInfoGlobal" msprop:Generator_TablePropName="DTInfoGlobal" msprop:Generator_RowDeletingName="DTInfoGlobalRowDeleting" msprop:Generator_RowChangingName="DTInfoGlobalRowChanging" msprop:Generator_RowEvHandlerName="DTInfoGlobalRowChangeEventHandler" msprop:Generator_RowDeletedName="DTInfoGlobalRowDeleted" msprop:Generator_UserTableName="DTInfoGlobal" msprop:Generator_RowChangedName="DTInfoGlobalRowChanged" msprop:Generator_RowEvArgName="DTInfoGlobalRowChangeEvent" msprop:Generator_RowClassName="DTInfoGlobalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Benef0a6Meses" msprop:Generator_ColumnVarNameInTable="columnBenef0a6Meses" msprop:Generator_ColumnPropNameInRow="Benef0a6Meses" msprop:Generator_ColumnPropNameInTable="Benef0a6MesesColumn" msprop:Generator_UserColumnName="Benef0a6Meses" type="xs:long" minOccurs="0" />
+              <xs:element name="Benef6a12Meses" msprop:Generator_ColumnVarNameInTable="columnBenef6a12Meses" msprop:Generator_ColumnPropNameInRow="Benef6a12Meses" msprop:Generator_ColumnPropNameInTable="Benef6a12MesesColumn" msprop:Generator_UserColumnName="Benef6a12Meses" type="xs:long" minOccurs="0" />
+              <xs:element name="Benef1Anio" msprop:Generator_ColumnVarNameInTable="columnBenef1Anio" msprop:Generator_ColumnPropNameInRow="Benef1Anio" msprop:Generator_ColumnPropNameInTable="Benef1AnioColumn" msprop:Generator_UserColumnName="Benef1Anio" type="xs:long" minOccurs="0" />
+              <xs:element name="Benef2Anios" msprop:Generator_ColumnVarNameInTable="columnBenef2Anios" msprop:Generator_ColumnPropNameInRow="Benef2Anios" msprop:Generator_ColumnPropNameInTable="Benef2AniosColumn" msprop:Generator_UserColumnName="Benef2Anios" type="xs:long" minOccurs="0" />
+              <xs:element name="Benef3Anios" msprop:Generator_ColumnVarNameInTable="columnBenef3Anios" msprop:Generator_ColumnPropNameInRow="Benef3Anios" msprop:Generator_ColumnPropNameInTable="Benef3AniosColumn" msprop:Generator_UserColumnName="Benef3Anios" type="xs:long" minOccurs="0" />
+              <xs:element name="BenefTotal" msprop:Generator_ColumnVarNameInTable="columnBenefTotal" msprop:Generator_ColumnPropNameInRow="BenefTotal" msprop:Generator_ColumnPropNameInTable="BenefTotalColumn" msprop:Generator_UserColumnName="BenefTotal" type="xs:long" minOccurs="0" />
+              <xs:element name="GF0a6Meses" msprop:Generator_ColumnVarNameInTable="columnGF0a6Meses" msprop:Generator_ColumnPropNameInRow="GF0a6Meses" msprop:Generator_ColumnPropNameInTable="GF0a6MesesColumn" msprop:Generator_UserColumnName="GF0a6Meses" type="xs:long" minOccurs="0" />
+              <xs:element name="GF6a12Meses" msprop:Generator_ColumnVarNameInTable="columnGF6a12Meses" msprop:Generator_ColumnPropNameInRow="GF6a12Meses" msprop:Generator_ColumnPropNameInTable="GF6a12MesesColumn" msprop:Generator_UserColumnName="GF6a12Meses" type="xs:long" minOccurs="0" />
+              <xs:element name="GF1a3Anios" msprop:Generator_ColumnVarNameInTable="columnGF1a3Anios" msprop:Generator_ColumnPropNameInRow="GF1a3Anios" msprop:Generator_ColumnPropNameInTable="GF1a3AniosColumn" msprop:Generator_UserColumnName="GF1a3Anios" type="xs:long" minOccurs="0" />
+              <xs:element name="GF4a11Anios" msprop:Generator_ColumnVarNameInTable="columnGF4a11Anios" msprop:Generator_ColumnPropNameInRow="GF4a11Anios" msprop:Generator_ColumnPropNameInTable="GF4a11AniosColumn" msprop:Generator_UserColumnName="GF4a11Anios" type="xs:long" minOccurs="0" />
+              <xs:element name="GFTotal" msprop:Generator_ColumnVarNameInTable="columnGFTotal" msprop:Generator_ColumnPropNameInRow="GFTotal" msprop:Generator_ColumnPropNameInTable="GFTotalColumn" msprop:Generator_UserColumnName="GFTotal" type="xs:long" minOccurs="0" />
+              <xs:element name="CantidadSalasCapital" msprop:Generator_ColumnVarNameInTable="columnCantidadSalasCapital" msprop:Generator_ColumnPropNameInRow="CantidadSalasCapital" msprop:Generator_ColumnPropNameInTable="CantidadSalasCapitalColumn" msprop:Generator_UserColumnName="CantidadSalasCapital" type="xs:long" minOccurs="0" />
+              <xs:element name="CantidadSalasInterior" msprop:Generator_ColumnVarNameInTable="columnCantidadSalasInterior" msprop:Generator_ColumnPropNameInRow="CantidadSalasInterior" msprop:Generator_ColumnPropNameInTable="CantidadSalasInteriorColumn" msprop:Generator_UserColumnName="CantidadSalasInterior" type="xs:long" minOccurs="0" />
+              <xs:element name="BenefTotalCapital" msprop:Generator_ColumnVarNameInTable="columnBenefTotalCapital" msprop:Generator_ColumnPropNameInRow="BenefTotalCapital" msprop:Generator_ColumnPropNameInTable="BenefTotalCapitalColumn" msprop:Generator_UserColumnName="BenefTotalCapital" type="xs:long" minOccurs="0" />
+              <xs:element name="BenefTotalInterior" msprop:Generator_ColumnVarNameInTable="columnBenefTotalInterior" msprop:Generator_ColumnPropNameInRow="BenefTotalInterior" msprop:Generator_ColumnPropNameInTable="BenefTotalInteriorColumn" msprop:Generator_UserColumnName="BenefTotalInterior" type="xs:long" minOccurs="0" />
+              <xs:element name="PromedioCapital" msprop:Generator_ColumnVarNameInTable="columnPromedioCapital" msprop:Generator_ColumnPropNameInRow="PromedioCapital" msprop:Generator_ColumnPropNameInTable="PromedioCapitalColumn" msprop:Generator_UserColumnName="PromedioCapital" type="xs:long" minOccurs="0" />
+              <xs:element name="PromedioInterior" msprop:Generator_ColumnVarNameInTable="columnPromedioInterior" msprop:Generator_ColumnPropNameInRow="PromedioInterior" msprop:Generator_ColumnPropNameInTable="PromedioInteriorColumn" msprop:Generator_UserColumnName="PromedioInterior" type="xs:long" minOccurs="0" />
+              <xs:element name="CantidadTotalSalas" msprop:Generator_ColumnVarNameInTable="columnCantidadTotalSalas" msprop:Generator_ColumnPropNameInRow="CantidadTotalSalas" msprop:Generator_ColumnPropNameInTable="CantidadTotalSalasColumn" msprop:Generator_UserColumnName="CantidadTotalSalas" type="xs:long" minOccurs="0" />
+              <xs:element name="BenefMas3Anios" msprop:Generator_ColumnVarNameInTable="columnBenefMas3Anios" msprop:Generator_ColumnPropNameInRow="BenefMas3Anios" msprop:Generator_ColumnPropNameInTable="BenefMas3AniosColumn" msprop:Generator_UserColumnName="BenefMas3Anios" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

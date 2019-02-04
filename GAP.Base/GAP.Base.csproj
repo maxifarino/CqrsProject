@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E11D7DBB-8536-4EF7-8DA7-20D45D052B16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAP.Base</RootNamespace>
+    <AssemblyName>GAP.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.5\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeCustom\CallSpAttribute.cs" />
+    <Compile Include="ContextSingleton.cs" />
+    <Compile Include="Dto\AdministrarConvenios\ConveniosDeSalasCunaDto.cs" />
+    <Compile Include="Dto\AdministrarDirecciones\PaisDto.cs" />
+    <Compile Include="Dto\AdministrarRequisitos\RequisitosReporteSalaCunaDto.cs" />
+    <Compile Include="Dto\AdministrarRequisitos\RequisitosDeSalaCunaDto.cs" />
+    <Compile Include="Dto\AdministrarSalasCuna\AdministrarSalasCunaDto.cs" />
+    <Compile Include="Dto\AdministrarTipoDocumento\TipoDocumentoDto.cs" />
+    <Compile Include="Dto\BeneficiarioTutorDto.cs" />
+    <Compile Include="Dto\Beneficiario\BeneficiarioCaracteristicaDto.cs" />
+    <Compile Include="Dto\Beneficiario\BeneficiarioDto.cs" />
+    <Compile Include="Dto\Beneficiario\BeneficiarioReporteDto.cs" />
+    <Compile Include="Dto\Beneficiario\BeneficiarioYTutorCaracteristicasDto.cs" />
+    <Compile Include="Dto\Beneficiario\BeneficiarioVerDto.cs" />
+    <Compile Include="Dto\ClaseDto.cs" />
+    <Compile Include="Dto\ContadorDto.cs" />
+    <Compile Include="Dto\CursoDto.cs" />
+    <Compile Include="Dto\CursoValidacionBajaDto.cs" />
+    <Compile Include="Dto\DomicilioDto.cs" />
+    <Compile Include="Dto\DomicilioIdDto.cs" />
+    <Compile Include="Dto\EntidadDetalleDto.cs" />
+    <Compile Include="Dto\Entidad\EntidadComboDto.cs" />
+    <Compile Include="Dto\EstadoSalaCunaDto.cs" />
+    <Compile Include="Dto\Filter.cs" />
+    <Compile Include="Dto\GridSocioAmbientalDto.cs" />
+    <Compile Include="Dto\GrupoEtarioDto.cs" />
+    <Compile Include="Dto\GrupoFamiliarDto.cs" />
+    <Compile Include="Dto\GrupoFamiliar\IntegranteResumenDto.cs" />
+    <Compile Include="Dto\GrupoFamiliar\IntegranteDto.cs" />
+    <Compile Include="Dto\GrupoFamiliar\TutorBeneficiarioCaracteristicaDto.cs" />
+    <Compile Include="Dto\GrupoFamiliar\TutorBeneficiarioVerDto.cs" />
+    <Compile Include="Dto\GrupoFamiliar\VinculoIntegranteDto.cs" />
+    <Compile Include="Dto\IdNombreDtoCaracteristica.cs" />
+    <Compile Include="Dto\InmuebleDto.cs" />
+    <Compile Include="Dto\MadresBeneficiariosDto.cs" />
+    <Compile Include="Dto\ParametrosProvisionDto.cs" />
+    <Compile Include="Dto\PersonaFisicaDto.cs" />
+    <Compile Include="Dto\AdministrarDirecciones\ProvinciasDto.cs" />
+    <Compile Include="Dto\PersonalAsistenciaDto.cs" />
+    <Compile Include="Dto\PersonalAsistioDto.cs" />
+    <Compile Include="Dto\PersonalDatosEditarDto.cs" />
+    <Compile Include="Dto\PersonalPorSalaDto.cs" />
+    <Compile Include="Dto\Personal\PersonalListado.cs" />
+    <Compile Include="Dto\Personal\PersonalRequisitosDto.cs" />
+    <Compile Include="Dto\Personal\PersonalDto.cs" />
+    <Compile Include="Dto\Personal\PersonalHistorialDto.cs" />
+    <Compile Include="Dto\Personal\PersonalVerDto.cs" />
+    <Compile Include="Dto\ProductosPorSalaDto.cs" />
+    <Compile Include="Dto\ProductoXFamiliaXSalaDto.cs" />
+    <Compile Include="Dto\ProvisionProductos\ProvisionProductosReporteCEDto.cs" />
+    <Compile Include="Dto\ProvisionProductos\ProvisionProductosReporteDto.cs" />
+    <Compile Include="Dto\ProvisionProductos\ProvisionProductosSumarizadoDto.cs" />
+    <Compile Include="Dto\Reportes\ReporteConfigDto.cs" />
+    <Compile Include="Dto\Reportes\ReportesPendientesDto.cs" />
+    <Compile Include="Dto\RolDto.cs" />
+    <Compile Include="Dto\EntidadDto.cs" />
+    <Compile Include="Dto\FormaJuridicaDto.cs" />
+    <Compile Include="Dto\IdNombreDto.cs" />
+    <Compile Include="Dto\SalaCunaDetalleDto.cs" />
+    <Compile Include="Dto\SalaCunaVerEntidadDto.cs" />
+    <Compile Include="Dto\SalasCunaBandejaDto.cs" />
+    <Compile Include="Dto\SalasCunaByCursoDto.cs" />
+    <Compile Include="Dto\SalasCunaDto.cs" />
+    <Compile Include="Dto\SalasCuna\SalasCunaComboDto.cs" />
+    <Compile Include="Dto\SalasCuna\SalasCunaReporteDto.cs" />
+    <Compile Include="Dto\SalitasCunaDto.cs" />
+    <Compile Include="Dto\Seguridad\ClienteDto.cs" />
+    <Compile Include="Dto\Seguridad\RefreshTokenDto.cs" />
+    <Compile Include="Dto\BeneficiarioSADto.cs" />
+    <Compile Include="Dto\InfoGlobalDto.cs" />
+    <Compile Include="Dto\SocioAmbientalDto.cs" />
+    <Compile Include="Dto\SucursalDto.cs" />
+    <Compile Include="Dto\TipoSocioAmbientalDto.cs" />
+    <Compile Include="Dto\Usuario\FuncionalidadDto.cs" />
+    <Compile Include="Dto\Usuario\UsuarioCidiDto.cs" />
+    <Compile Include="Dto\Usuario\UsuarioDto.cs" />
+    <Compile Include="Enumerations\DomicilioStateEnum.cs" />
+    <Compile Include="Enumerations\EstadoReporteEnum.cs" />
+    <Compile Include="Enumerations\FiltroUbicacionEnum.cs" />
+    <Compile Include="Enumerations\LugarOrigenStateEnum.cs" />
+    <Compile Include="Enumerations\TiposArchivo.cs" />
+    <Compile Include="Enumerations\TiposReporte.cs" />
+    <Compile Include="Enumerations\SalaCunaStateEnum.cs" />
+    <Compile Include="Enumerations\TablaSateliteEnum.cs" />
+    <Compile Include="Exceptions\GobTechnicalException.cs" />
+    <Compile Include="GlobalVars.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\ExportExcelUtil.cs" />
+    <Compile Include="Helper\FileUtil.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\IntegerHelper.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\SqlGenerator.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="MessageError.cs" />
+    <Compile Include="Mock\BeneficiarioDtoMocked.cs" />
+    <Compile Include="Mock\EntidadDtoMocked.cs" />
+    <Compile Include="Mock\FuncionalidadesDtoMocked.cs" />
+    <Compile Include="Mock\PersonaFisicaMocked.cs" />
+    <Compile Include="Mock\ProvisionProductosReporteDtoMocked.cs" />
+    <Compile Include="Mock\SalasCunaDtoMocked.cs" />
+    <Compile Include="Mock\SalitaCunaDtoMocked.cs" />
+    <Compile Include="Mock\TablaSateliteMocked.cs" />
+    <Compile Include="Mock\UsuarioDtoMocked.cs" />
+    <Compile Include="NoCAPSAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ReportViewerUtil.cs" />
+    <Compile Include="ResultValidation\IResult.cs" />
+    <Compile Include="ResultValidation\Result.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelView\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

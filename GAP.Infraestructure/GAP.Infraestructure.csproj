@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{366D595C-0CEE-46FE-9BF8-FEF5E46857E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAP.Infraestructure</RootNamespace>
+    <AssemblyName>GAP.Infraestructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter">
+      <HintPath>..\packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GuyWire.cs" />
+    <Compile Include="IConfigurator.cs" />
+    <Compile Include="Interceptor\TransactionAspectCommandHandler.cs" />
+    <Compile Include="IOCCommandHandler.cs" />
+    <Compile Include="IOCQueryHandler.cs" />
+    <Compile Include="IOCRepository.cs" />
+    <Compile Include="IOCServiceBusiness.cs" />
+    <Compile Include="IOCVisitorConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAP.Base\GAP.Base.csproj">
+      <Project>{e11d7dbb-8536-4ef7-8da7-20d45d052b16}</Project>
+      <Name>GAP.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Cqrs.Implementation\GAP.Cqrs.Implementation.csproj">
+      <Project>{72255629-f6b9-4358-8f5a-4ffe1b8736df}</Project>
+      <Name>GAP.Cqrs.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.CqrsCore\GAP.CqrsCore.csproj">
+      <Project>{934ed199-011c-4283-80bc-cd897e48cf29}</Project>
+      <Name>GAP.CqrsCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.DataAcces\GAP.DataAcces.csproj">
+      <Project>{8e5d78bd-378f-4580-b91b-4b7e1b33e235}</Project>
+      <Name>GAP.DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Domain\GAP.Domain.csproj">
+      <Project>{b7a7b2af-f602-4524-9ad8-a391cf51cac0}</Project>
+      <Name>GAP.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.Cidi\GAP.Repository.WebAPI.Cidi.csproj">
+      <Project>{10d73b1c-cd6c-4a6a-a8ba-c8c5eeea0fa4}</Project>
+      <Name>GAP.Repository.WebAPI.Cidi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.GovernmentScheme\GAP.Repository.GovernmentScheme.csproj">
+      <Project>{64bd3078-2e2d-42e4-a339-23852b0a2ce3}</Project>
+      <Name>GAP.Repository.GovernmentScheme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.LocalScheme\GAP.Repository.LocalScheme.csproj">
+      <Project>{4b2e67e0-aece-4f17-a40e-5b6732e894ac}</Project>
+      <Name>GAP.Repository.LocalScheme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.RepositoryBase\GAP.RepositoryBase.csproj">
+      <Project>{657bb797-df00-4d7c-9b32-ce3d28edf143}</Project>
+      <Name>GAP.RepositoryBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Visitor.Implementation\GAP.Visitor.Implementation.csproj">
+      <Project>{91f8d57f-eff9-4cca-8ac9-ebd0123837a3}</Project>
+      <Name>GAP.Visitor.Implementation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

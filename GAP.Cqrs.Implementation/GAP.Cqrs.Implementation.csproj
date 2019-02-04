@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72255629-F6B9-4358-8F5A-4FFE1B8736DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GAP.Cqrs.Implementation</RootNamespace>
+    <AssemblyName>GAP.Cqrs.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator.WindsorAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MicosoftReportViewerWebForms_v11.1.0.1\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosUpdateCommand.cs" />
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\AdministrarSocioAmbiental\SocioAmbientalSaveCommand.cs" />
+    <Compile Include="CommandHandler\AdministrarSocioAmbiental\SocioAmbientalSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\AdministrarRequisitosPackage\RequisitosSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\AsignarBeneficiarioCommand.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\AsignarBeneficiarioCommandHandler.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BajaBeneficiarioCommand.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BajaBeneficiarioCommandHandler.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BeneficiarioSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BeneficiarioUpdateCommand.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BeneficiarioUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoSaveCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoUpdateCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\InscripcionDeleteCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\InscripcionCursoCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\InscripcionCursoCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\InscripcionDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoBajaCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\CursoBajaCommandHandler.cs" />
+    <Compile Include="CommandHandler\CursoPackage\RegistrarAsistenciaCommand.cs" />
+    <Compile Include="CommandHandler\CursoPackage\RegistrarAsistenciaCommandHandler.cs" />
+    <Compile Include="CommandHandler\DomicilioPackage\DomicilioSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\EntidadPersonaJuridicaPackage\EntidadSaveCommanHandler.cs" />
+    <Compile Include="CommandHandler\GrupoFamiliarPackage\IntegranteDeleteCommand.cs" />
+    <Compile Include="CommandHandler\GrupoFamiliarPackage\IntegranteDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\GrupoFamiliarPackage\IntegranteSaveCommand.cs" />
+    <Compile Include="CommandHandler\GrupoFamiliarPackage\IntegranteSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleUpdateCommand.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalBajaCommand.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalBajaCommandHandler.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalEditCommand.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalSaveCommand.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalEditCommandHandler.cs" />
+    <Compile Include="CommandHandler\PersonalPackage\PersonalSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\PersonPackage\PersonSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\PersonPackage\PersonUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\ReportePackage\ConsultarReportesTimer.cs" />
+    <Compile Include="CommandHandler\ReportePackage\GeneradorReporte.cs" />
+    <Compile Include="CommandHandler\ReportePackage\ActualizarReporteCommand.cs" />
+    <Compile Include="CommandHandler\ReportePackage\ActualizarReporteCommandHandler.cs" />
+    <Compile Include="CommandHandler\ReportePackage\RemoveTempFilesTimer.cs" />
+    <Compile Include="CommandHandler\ReportePackage\ReportesConfiguracion.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaInaugurarCommand.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaInaugurarCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaSaveDefinitiveCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaUpdateCommand.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaUpdateCommand.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaUpdateCommandHandler.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\IRefreshTokenFactory.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\RefreshTokenFactoryMocked.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioDeleteCommand.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioDeleteCommandHandler.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioSaveCommandHandler.cs" />
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosDeleteCommand.cs" />
+    <Compile Include="CommandHandler\AdminisitrarConveniosPackage\ConveniosSaveCommand.cs" />
+    <Compile Include="CommandHandler\AdministrarRequisitosPackage\RequisitosSaveCommand.cs" />
+    <Compile Include="CommandHandler\BeneficiarioPackage\BeneficiarioSaveCommand.cs" />
+    <Compile Include="CommandHandler\DomicilioPackage\DomicilioSaveCommand.cs" />
+    <Compile Include="CommandHandler\EntidadPersonaJuridicaPackage\EntidadSaveCommand.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleDeleteCommand.cs" />
+    <Compile Include="CommandHandler\InmueblePackage\InmuebleSaveCommand.cs" />
+    <Compile Include="CommandHandler\PersonPackage\PersonSaveCommand.cs" />
+    <Compile Include="CommandHandler\PersonPackage\PersonUpdateCommand.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaDeleteCommand.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaSaveCommand.cs" />
+    <Compile Include="CommandHandler\SalaCunaPackage\SalaCunaSaveDefinitiveCommand.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaDeleteCommand.cs" />
+    <Compile Include="CommandHandler\SalitaCunaPackage\SalitaCunaSaveCommand.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\RefreshTokenFactory.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioSaveCommand.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioUpdateCommand.cs" />
+    <Compile Include="CommandHandler\UsuarioPackage\UsuarioUpdateCommandHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\AdministrarConveniosQuery\ConveniosDeSalaCunaQueryHandler.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\LugarDeOrigenQuery.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\LugarDeOrigenQueryHandler.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\LugarDeOrigenQueryResult.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\States\IStateOrigen.cs" />
+    <Compile Include="Query\AdministrarRequisitosQuery\RequisitosReporteSalaCunaQueryHandler.cs" />
+    <Compile Include="Query\AdministrarRequisitosQuery\RequisitosReporteSalaCunaQueryResult.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\AdministrarSocioAmbientalByFiltersQueryHandler.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\AdministrarSocioAmbientalByFiltersQueryResult.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\AdministrarSocioAmbientalByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\ReporteSocioAmbientalByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\ReporteSocioAmbientalByFiltersQueryHandler.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\ReporteSocioAmbientalByFiltersQueryResults.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerSocioAmbientalByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerSocioAmbientalByFiltersQueryHandler.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerSocioAmbientalByFiltersQueryResults.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerTipoSocioAmbientalQuery.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerTipoSocioAmbientalQueryHandler.cs" />
+    <Compile Include="Query\AdministrarSocioAmbiental\VerTipoSocioAmbientalQueryResults.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioBySalaQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioBySalaQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioBySalaQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioCaracteristicaModQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioCaracteristicaQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioConsultaReporteQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioConsultaReporteQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioExistenciaModQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioExistenciaModQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioVerQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioCaracteristicaQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioCaracteristicaQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioExistenciaQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioExistenciaQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioReporteQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioReporteQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioReporteQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioTutorByFiltersQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioTutorByFiltersQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioYTutorCaracteristicasQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioYTutorCaracteristicasQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioVerQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioVerQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioYTutorCaracteristicasQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\CantidadBeneficiariosQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\CantidadBeneficiariosQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\CantidadBeneficiariosQueryResult.cs" />
+    <Compile Include="Query\Clase\ClaseByCursoQuery.cs" />
+    <Compile Include="Query\Clase\ClaseByCursoQueryHandler.cs" />
+    <Compile Include="Query\Clase\ClaseByCursoQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\ListadoInscriptosQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\ListadoInscriptosQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\GrupoConvivienteQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\GrupoConvivienteQueryHandler.cs" />
+    <Compile Include="Query\MadresBeneficiariosQuery\MadresBeneficiariosQuery.cs" />
+    <Compile Include="Query\MadresBeneficiariosQuery\MadresBeneficiariosQueryHandler.cs" />
+    <Compile Include="Query\MadresBeneficiariosQuery\MadresBeneficiariosQueryResults.cs" />
+    <Compile Include="Query\InfoGlobal\InfoGlobalQuery.cs" />
+    <Compile Include="Query\InfoGlobal\InfoGlobalQueryHandler.cs" />
+    <Compile Include="Query\InfoGlobal\InfoGlobalQueryResults.cs" />
+    <Compile Include="Query\Personal\AsistenciaPersonalByFilterQuery.cs" />
+    <Compile Include="Query\Personal\AsistenciaPersonalByFilterQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalAsignadoACursoQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalAsignadoACursoQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalCertificadoQueryHandler.cs" />
+    <Compile Include="Query\Personal\AsistenciaPersonalByFilterQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalCertificadoQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\CursoByFiltersCursoQuery.cs" />
+    <Compile Include="Query\CursoQuery\CursoByFiltersCursoQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\CursoByFiltersCursoQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\CursoByIdQuery.cs" />
+    <Compile Include="Query\CursoQuery\CursoByIdQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\CursoByIdQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\CursoInscriptosBajaQuery.cs" />
+    <Compile Include="Query\CursoQuery\CursoInscriptosBajaQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\CursoInscriptosBajaQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\CursoValidacionBajaQuery.cs" />
+    <Compile Include="Query\CursoQuery\CursoValidacionBajaQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\CursoValidacionBajaQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\SalaCunaByCursoQuery.cs" />
+    <Compile Include="Query\CursoQuery\SalaCunaByCursoQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\SalaCunaByCursoQueryResult.cs" />
+    <Compile Include="Query\CursoQuery\AsistenciaPersonalCursoQuery.cs" />
+    <Compile Include="Query\CursoQuery\AsistenciaPersonalCursoQueryHandler.cs" />
+    <Compile Include="Query\CursoQuery\AsistenciaPersonalCursoQueryResult.cs" />
+    <Compile Include="Query\DomicilioQuery\DomicilioEditQueryHandler.cs" />
+    <Compile Include="Query\DomicilioQuery\DomicilioEditQueryResult.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateDepartamentoOrigen.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\States\StateLocalidadOrigen.cs" />
+    <Compile Include="Query\AdministrarLugarOrigenQuery\States\StateProvinciaOrigen.cs" />
+    <Compile Include="Query\AdministrarRequisitosQuery\RequisitosDeSalaCunaQueryHandler.cs" />
+    <Compile Include="Query\AdministrarSalaCunaQuery\AdministrarSalasCunaByFiltersQueryHandler.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioByFiltersQueryHandler.cs" />
+    <Compile Include="Query\AdministrarBeneficiariosQuery\DatosAdminBeneficiarioQueryHandler.cs" />
+    <Compile Include="Query\DomicilioQuery\DomicilioByFiltersQueryHandler.cs" />
+    <Compile Include="Query\DomicilioQuery\States\IStateDomicilio.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateBarrio.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateCalle.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateDepartamento.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateLocalidad.cs" />
+    <Compile Include="Query\DomicilioQuery\States\StateProvincia.cs" />
+    <Compile Include="Query\EntidadQuery\GetAllEntidadQuery.cs" />
+    <Compile Include="Query\EntidadQuery\GetAllEntidadQueryHandler.cs" />
+    <Compile Include="Query\EntidadQuery\EntidadByFiltersQueryHandler.cs" />
+    <Compile Include="Query\EntidadQuery\GetAllEntidadQueryResult.cs" />
+    <Compile Include="Query\EntidadQuery\SalaCunaVerEntidadQuery.cs" />
+    <Compile Include="Query\EntidadQuery\SalaCunaVerEntidadQueryHandler.cs" />
+    <Compile Include="Query\EntidadQuery\SalaCunaVerEntidadQueryResult.cs" />
+    <Compile Include="Query\EntidadQuery\VerEntidadByFiltersQueryHandler.cs" />
+    <Compile Include="Query\EstadoSalaCunaQuery\EstadoSalaCunaQueryHandler.cs" />
+    <Compile Include="Query\FormaJuridicaQuery\FormaJuridicaQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\GrupoFamiliarQuery.cs" />
+    <Compile Include="Query\GrupoFamiliar\GrupoFamiliarQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\GrupoFamiliarQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\IntegranteQuery.cs" />
+    <Compile Include="Query\GrupoFamiliar\IntegranteQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\IntegranteQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\IntegrantesByTutorQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorBeneficiarioVerQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorBeneficiarioVerQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorCaracteristicaQuery.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorCaracteristicaQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorCaracteristicaQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorListProgSocialesQuery.cs" />
+    <Compile Include="Query\GrupoFamiliar\VinculoIntegranteQuery.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorListProgSocialesQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\VinculoIntegranteQueryHandler.cs" />
+    <Compile Include="Query\GrupoFamiliar\TutorListProgSocialesQueryResult.cs" />
+    <Compile Include="Query\GrupoFamiliar\VinculoIntegranteQueryResult.cs" />
+    <Compile Include="Query\InmuebleQuery\InmuebleByFiltersQueryHandler.cs" />
+    <Compile Include="Query\PersonaFisicaQuery\PersonaFisicaQueryHandler.cs" />
+    <Compile Include="Query\PersonalPorSalaQuery\PersonalPorSalaQuery.cs" />
+    <Compile Include="Query\PersonalPorSalaQuery\PersonalPorSalaQueryHandler.cs" />
+    <Compile Include="Query\PersonalPorSalaQuery\PersonalPorSalaQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalAsistioByClaseQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalAsistioByClaseQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalByCursoQuery.cs" />
+    <Compile Include="Query\Personal\PersonalByCursoQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalByCursoQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalEditQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalEditQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalInscriptoByFilterQuery.cs" />
+    <Compile Include="Query\Personal\PersonalInscriptoByFilterQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalInscriptoByFilterQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalVerQuery.cs" />
+    <Compile Include="Query\Personal\PersonalVerQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalVerQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalByFiltersQuery.cs" />
+    <Compile Include="Query\Personal\PersonalByFiltersQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalByFiltersQueryResults.cs" />
+    <Compile Include="Query\Personal\PersonalDomicilioQuery.cs" />
+    <Compile Include="Query\Personal\PersonalDomicilioQueryHandler.cs" />
+    <Compile Include="Query\Personal\PersonalDomicilioQueryResult.cs" />
+    <Compile Include="Query\PersonQuery\PersonaByCuitQuery.cs" />
+    <Compile Include="Query\PersonQuery\PersonaByCuitQueryHandler.cs" />
+    <Compile Include="Query\PersonQuery\PersonaByCuitQueryResult.cs" />
+    <Compile Include="Query\Personal\PersonalEditQuery.cs" />
+    <Compile Include="Query\PersonQuery\PersonByNameLastNameQueryHandler.cs" />
+    <Compile Include="Query\ProductoPorFamiliaQuery\ProductoPorFamiliaQuery.cs" />
+    <Compile Include="Query\ProductoPorFamiliaQuery\ProductoPorFamiliaQueryHandler.cs" />
+    <Compile Include="Query\ProductoPorFamiliaQuery\ProductoPorFamiliaQueryResult.cs" />
+    <Compile Include="Query\ProductoPorSalaQuery\ProductoPorSalaQuery.cs" />
+    <Compile Include="Query\ProductoPorSalaQuery\ProductoPorSalaQueryHandler.cs" />
+    <Compile Include="Query\ProductoPorSalaQuery\ProductoPorSalaQueryResult.cs" />
+    <Compile Include="Query\ProvisionProductosCEQuery\ProvisionProductosCEQuery.cs" />
+    <Compile Include="Query\ProvisionProductosCEQuery\ProvisionProductosCEQueryHandler.cs" />
+    <Compile Include="Query\ProvisionProductosCEQuery\ProvisionProductosCEQueryResult.cs" />
+    <Compile Include="Query\ProvisionProductosQuery\ProvisionProductosQuery.cs" />
+    <Compile Include="Query\ProvisionProductosQuery\ProvisionProductosQueryHandler.cs" />
+    <Compile Include="Query\ProvisionProductosQuery\ProvisionProductosQueryResult.cs" />
+    <Compile Include="Query\ReporteQuery\ConsultarReportesPendientesQuery.cs" />
+    <Compile Include="Query\ReporteQuery\ConsultarReportesPendientesQueryHandler.cs" />
+    <Compile Include="Query\ReporteQuery\ConsultarReportesPendientesQueryResult.cs" />
+    <Compile Include="Query\RolQuery\RolAsignaByIdQuery.cs" />
+    <Compile Include="Query\RolQuery\RolAsignaByIdQueryHandler.cs" />
+    <Compile Include="Query\RolQuery\RolAsignaByIdQueryResult.cs" />
+    <Compile Include="Query\RolQuery\RolByIdQueryHandler.cs" />
+    <Compile Include="Query\RolQuery\RolQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\CantidadBeneficiariosPorSalaQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\CantidadBeneficiariosPorSalaQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\CantidadBeneficiariosPorSalaQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByEntidadQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByEntidadQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByIdQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByEntidadQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaDetalleQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaDetalleQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaReporteQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaReporteQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaReporteQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaTieneBeneficiariosQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaTieneBeneficiariosQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaTieneBeneficiariosQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaBandejaByIdQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersCursoQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersCursoQueryHandler.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersCursoQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersQueryHandler.cs" />
+    <Compile Include="Query\SalitaCunaQuery\GrupoEtarioByFiltersQuery.cs" />
+    <Compile Include="Query\SalitaCunaQuery\GrupoEtarioByFiltersQueryHandler.cs" />
+    <Compile Include="Query\SalitaCunaQuery\GrupoEtarioByFiltersQueryResults.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenQuery.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenQueryHandler.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenQueryResult.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenTurnoQuery.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenTurnoQueryHandler.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaAdminBenTurnoQueryResult.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaByFiltersQueryHandler.cs" />
+    <Compile Include="Query\SucursalQuery\SucursalQueryHandler.cs" />
+    <Compile Include="Query\TablaSatelitesQuery\TablaSateliteCaracteristicaGenericClassQueryHandler.cs" />
+    <Compile Include="Query\TablaSatelitesQuery\TablaSatelitesGenericClassQueryHandler.cs" />
+    <Compile Include="Query\TipoDocumentoQuery\TipoDocumentoRegQueryHandler.cs" />
+    <Compile Include="Query\TipoDocumentoQuery\TipoDocumentoRegQueryResult.cs" />
+    <Compile Include="Query\TipoDocumentoQuery\TipoDocumentoQueryHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\EnviarMailQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\EnviarMailQueryHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\EnviarMailQueryResult.cs" />
+    <Compile Include="Query\UsuarioQuery\LoguinCidiQueryHandler.cs" />
+    <Compile Include="Query\AdministrarConveniosQuery\ConveniosDeSalaCunaQueryResult.cs" />
+    <Compile Include="Query\AdministrarRequisitosQuery\RequisitosDeSalaCunaQueryResult.cs" />
+    <Compile Include="Query\AdministrarSalaCunaQuery\AdministrarSalasCunaByFiltersQueryResult.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioByFiltersQueryResult.cs" />
+    <Compile Include="Query\AdministrarBeneficiariosQuery\DatosAdminBeneficiarioQueryResult.cs" />
+    <Compile Include="Query\DomicilioQuery\DomicilioQueryResult.cs" />
+    <Compile Include="Query\EntidadQuery\EntidadByFiltersQueryResult.cs" />
+    <Compile Include="Query\EntidadQuery\VerEntidadByFiltersQueryResult.cs" />
+    <Compile Include="Query\EstadoSalaCunaQuery\EstadoSalaCunaByQueryResults.cs" />
+    <Compile Include="Query\FormaJuridicaQuery\FormaJuridicaByFiltersQueryResults.cs" />
+    <Compile Include="Query\InmuebleQuery\InmuebleByFiltersQueryResult.cs" />
+    <Compile Include="Query\PersonaFisicaQuery\PersonaFisicaQueryResult.cs" />
+    <Compile Include="Query\PersonQuery\PersonByNameLastNameQueryResult.cs" />
+    <Compile Include="Query\RolQuery\RolByIdQueryResults.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByIdQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaDetalleQueryResult.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaBandejaByIdQueryResults.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersQueryResults.cs" />
+    <Compile Include="Query\RolQuery\RolByFiltersQueryResults.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaByFiltersQueryResults.cs" />
+    <Compile Include="Query\SucursalQuery\SucursalByEntidadBancariaQueryResult.cs" />
+    <Compile Include="Query\TablaSatelitesQuery\TablaSateliteCaracteristicaGenericClassQueryResult.cs" />
+    <Compile Include="Query\TablaSatelitesQuery\TablaSatelitesGenericClassQueryResult.cs" />
+    <Compile Include="Query\TipoDocumentoQuery\TipoDocumentoQueryResult.cs" />
+    <Compile Include="Query\AdministrarConveniosQuery\ConveniosDeSalaByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarRequisitosQuery\RequisitosDeSalaByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarSalaCunaQuery\AdministrarSalasCunaByFiltersQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaBandejaByIdQuery.cs" />
+    <Compile Include="Query\BeneficiariosQuery\BeneficiarioByFiltersQuery.cs" />
+    <Compile Include="Query\AdministrarBeneficiariosQuery\DatosAdminBeneficiarioQuery.cs" />
+    <Compile Include="Query\DomicilioQuery\DomicilioByFilterQuery.cs" />
+    <Compile Include="Query\EntidadQuery\EntidadByFiltersQuery.cs" />
+    <Compile Include="Query\EstadoSalaCunaQuery\EstadoSalaCunaByFiltersQuery.cs" />
+    <Compile Include="Query\FormaJuridicaQuery\FormaJuridicaByFiltersQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\LoguinCidiQueryResult.cs" />
+    <Compile Include="Query\InmuebleQuery\InmuebleByFiltersQuery.cs" />
+    <Compile Include="Query\PersonaFisicaQuery\PersonaFisicaByFilterQuery.cs" />
+    <Compile Include="Query\PersonQuery\PersonByNombreLastNameQuery.cs" />
+    <Compile Include="Query\RolQuery\RolByIdQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalaCunaByIdQuery.cs" />
+    <Compile Include="Query\SalaCunaQuery\SalasCunaByFiltersQuery.cs" />
+    <Compile Include="Query\RolQuery\RolByFiltersQuery.cs" />
+    <Compile Include="Query\SalitaCunaQuery\SalitaCunaByFiltersQuery.cs" />
+    <Compile Include="Query\SucursalQuery\SucursalByEntidadBancariaQuery.cs" />
+    <Compile Include="Query\TablaSatelitesQuery\TablaSatelitesGenericClassQuery.cs" />
+    <Compile Include="Query\TipoDocumentoQuery\TipoDocumentoQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\LoguinCidiQuery.cs" />
+    <Compile Include="Query\EntidadQuery\VerEntidadByFiltersQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioActivoHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioActivoQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioActivoResult.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioByIdHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioByIdQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\ObtenerUsuarioByIdResult.cs" />
+    <Compile Include="Query\UsuarioQuery\UrlCidiQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\UrlCidiQueryHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\UrlCidiQueryResult.cs" />
+    <Compile Include="Query\UsuarioQuery\UsuariosByFiltersQuery.cs" />
+    <Compile Include="Query\UsuarioQuery\UsuariosByFiltersQueryHandler.cs" />
+    <Compile Include="Query\UsuarioQuery\UsuariosByFiltersQueryResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAP.Base\GAP.Base.csproj">
+      <Project>{e11d7dbb-8536-4ef7-8da7-20d45d052b16}</Project>
+      <Name>GAP.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.CqrsCore\GAP.CqrsCore.csproj">
+      <Project>{934ed199-011c-4283-80bc-cd897e48cf29}</Project>
+      <Name>GAP.CqrsCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Domain\GAP.Domain.csproj">
+      <Project>{b7a7b2af-f602-4524-9ad8-a391cf51cac0}</Project>
+      <Name>GAP.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.Cidi\GAP.Repository.WebAPI.Cidi.csproj">
+      <Project>{10d73b1c-cd6c-4a6a-a8ba-c8c5eeea0fa4}</Project>
+      <Name>GAP.Repository.WebAPI.Cidi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Repository.LocalScheme\GAP.Repository.LocalScheme.csproj">
+      <Project>{4b2e67e0-aece-4f17-a40e-5b6732e894ac}</Project>
+      <Name>GAP.Repository.LocalScheme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.RepositoryBase\GAP.RepositoryBase.csproj">
+      <Project>{657bb797-df00-4d7c-9b32-ce3d28edf143}</Project>
+      <Name>GAP.RepositoryBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GAP.Visitor.Implementation\GAP.Visitor.Implementation.csproj">
+      <Project>{91f8d57f-eff9-4cca-8ac9-ebd0123837a3}</Project>
+      <Name>GAP.Visitor.Implementation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Query\BandejaSalasCunaQuery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
